@@ -137,20 +137,20 @@ class FincaCinegetica extends FincaRustica {
   }
 
   buscarCazaMayor() {
-    let array = [];
+    let arrayAnimalesPresentes = [];
     for (var i in this.cazaMayor) {
       if (this.cazaMayor[i]) {
-        array.push(i);
+        arrayAnimalesPresentes.push(i);
       }
     }
-    return array;
+    return arrayAnimalesPresentes;
   }
 
   leerCazaMayor() {
-    let arrayCaza = this.buscarCazaMayor();
-    if (arrayCaza.length > 0) {
+    let arrayAnimalesPresentes = this.buscarCazaMayor();
+    if (arrayAnimalesPresentes.length > 0) {
       var mensaje = "En la finca se puede practicar la caza mayor en:\n";
-      for (let animal of arrayCaza) {
+      for (let animal of arrayAnimalesPresentes) {
         mensaje += `- ${animal}\n`;
       }
     } else {
